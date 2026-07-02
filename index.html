@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background-image: url(./images/bg-desktop.svg);
+      background-color: hsl(257, 40%, 49%);
+
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .attribution {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: #ffffff92;
+    }
+
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    header {
+      padding: 4rem 0;
+    }
+
+    .huddle {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    .screen-img {
+      margin-top: 1.2rem;
+
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 3.2rem;
+      font-weight: 600;
+      font-style: normal;
+      color: #fff;
+
+    }
+
+    .text {
+      max-width: 520px;
+    }
+
+    .image,
+    .text {
+      flex: 1;
+    }
+
+    .describe {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      font-style: normal;
+      color: #fff;
+      margin: 2rem 0 1.5rem;
+      line-height: 2.4rem;
+    }
+
+    .btn {
+      margin-top: 0.4rem;
+      border: none;
+      padding: 1.6rem 6.4rem;
+      border-radius: 3.2rem;
+      color: hsl(257, 40%, 49%);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      transition: all 0.3s;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.55);
+      cursor: pointer;
+    }
+
+    .icon-section {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 1.2rem;
+      margin-right: 4rem;
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid white;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    @media (max-width:768px) {
+
+      body {
+
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      .container {
+        padding: 0 2rem;
+      }
+
+      .main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .huddle {
+        width: 50%;
+        height: auto;
+      }
+
+      .screen-img {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+      }
+
+      .text {
+        width: 100%;
+        max-width: none;
+        margin-top: 3rem;
+        text-align: center;
+      }
+
+      h1 {
+        width: 100%;
+        font-size: 2.4rem;
+      }
+
+      .describe {
+        font-size: 1.5rem;
+      }
+
+      .icon-section {
+        justify-content: center;
+        margin: 4rem 0;
+      }
+
+      .btn {
+        padding: 1.2rem 3.2rem;
+        margin-bottom: 6.4rem;
+        font-size: 1.2rem;
+        max-width: 220px;
+        width: 100%;
+      }
+    }
+
+    @media (hover: hover) {
+
+      .btn:hover {
+        color: #fff;
+        background-color: hsl(300, 69%, 71%);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      }
+
+      .icon:hover {
+        color: hsl(300, 69%, 71%);
+        border-color: hsl(300, 69%, 71%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img class="huddle" src="./images/logo.svg" alt="Huddle logo">
+    </header>
+
+    <main class="main">
+
+      <div class="image">
+        <img src="./images/illustration-mockups.svg" alt="Illustration showing the Huddle dashboard" class="screen-img">
+      </div>
+
+      <div class="text">
+        <h1>Build The Community Your Fans Will Love</h1>
+
+        <p class="describe">
+          Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+          Create connections with your users as you engage in genuine discussion.
+        </p>
+
+
+        <button class="btn">Register</button>
+
+      </div>
+    </main>
+    <section class="icon-section">
+      <a href="#" class="icon">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+
+      <a href="#" class="icon">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+
+      <a href="#" class="icon">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+    </section>
+    <footer class="attribution">
+
+
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Mohammad Heyrani</a>.
+    </footer>
+  </div>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
